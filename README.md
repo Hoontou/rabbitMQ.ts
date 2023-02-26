@@ -1,7 +1,5 @@
-## rabbitMQ amqp example
+## rabbitMQ amqplib example
 내가 나중에 가져다쓰려고 만드는.
-
-npm i amqplib
 
 지금 example에서 amqp를 commonjs require로 가져온다.  
 // i use commonjs require as importing amqplib.
@@ -17,4 +15,4 @@ import식으로 테스트에 성공했으면 ts가이드를 받기위해 @types/
 
 writing on fastify, ts
 
-main code is common/amqp.ts
+main codes in src
