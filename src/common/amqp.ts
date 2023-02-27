@@ -9,7 +9,9 @@ if (!RABBIT) {
 const handleTst1 = (message) => {
   const data = JSON.parse(message.content.toString());
   console.log('consume tst1 msg');
-  console.log(data);
+  console.log(data); 
+  //u should define logic for handling data here
+  //db insert or anything
 };
 
 const handleTst2 = (message) => {
@@ -34,6 +36,11 @@ class RabbitMQ {
         que,
         (message) => {
           const targetQue: string = message.fields.routingKey;
+          //other suggestion is adding property like action to data,
+          //const data = JSON.parse(message.content.toString());
+          // if (data.acion === 1) {
+          // dbinsert(data.~~) }
+          
           if (targetQue === 'tst1') {
             handleTst1(message);
           }
