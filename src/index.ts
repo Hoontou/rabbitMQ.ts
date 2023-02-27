@@ -18,6 +18,7 @@ server.listen({ host: '0.0.0.0', port: 80 }, (err, address) => {
     console.error(err);
     process.exit(1);
   }
-  rabbitMQ.initialize(['tst1', 'tst2']);
+  //this can be async await, if u want
+  rabbitMQ.initialize(['tst1', 'tst2']);//need string[] as list of que names
   console.log(`Server listening at ${address}`);
 });
