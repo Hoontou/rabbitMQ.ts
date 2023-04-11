@@ -1,5 +1,6 @@
+import * as amqp from 'amqplib';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const amqp = require('amqplib');
+//const amqp = require('amqplib');
 const RABBIT = process.env.RABBIT;
 //amqp://guest:guest@rabbit:5672 in my docker env
 if (!RABBIT) {
